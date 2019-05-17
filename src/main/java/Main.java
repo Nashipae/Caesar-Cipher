@@ -15,7 +15,7 @@ public class Main {
         int shift = requestText.nextInt();
 //
         Encrypter myEncrypter = new Encrypter();
-        String cipherText = myEncrypter.encrypt(requestText, shift);
+        String cipherText = myEncrypter.encrypt(userInputtedText, shift);
         System.out.println("Your encrypted text is : " + cipherText);
 
         Decrypter myDecrypter = new Decrypter();

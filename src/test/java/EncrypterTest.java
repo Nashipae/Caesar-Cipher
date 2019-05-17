@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 public class EncrypterTest {
 
 
-
+    //    Test on encrypter.
     @Test
     public void encryptTest() {
         Encrypter text = new Encrypter();
