@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 public class EncrypterTest {
 
+
+
     @Test
     public void encryptTest() {
         Encrypter text = new Encrypter();

@@ -11,7 +11,7 @@ public class Encoder {
 //        Get user input on shift value
         System.out.println(" Enter the value by which each character in the plaintext message gets shifted : ");
         int shift = requestedText.nextInt();
-        String cipherText = "";
+        String cipher = "";
 
         for(int i=0; i < userInputtedText.length();i++)
         {
@@ -35,9 +35,9 @@ public class Encoder {
                 //reshift to starting position
                 alphabet = (char) (alphabet+'A'-'Z'-1);
             }
-            cipherText = cipherText + alphabet;
+            cipher = cipher + alphabet;
         }
-        System.out.println(" Your encrypted text is : " + cipherText);
+        System.out.println(" Your encrypted text is : " + cipher);
     }
 
 
