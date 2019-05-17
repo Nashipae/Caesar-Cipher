@@ -1,38 +1,49 @@
-//import java.util.*;
-//
-//public class Decrypter {
-//    private String cipherText = Encoder.main();
-//
-//    public Decrypter(String cipherText) {
-//        this.cipherText = cipherText;
-//
-//        int shift = cipherText();
-////        String cipherText = "";
-//
-//        for(int i=0; i < cipherText.length();i++)
-//        {
-////             Traverse each character in the plaintext one at a time
-//            char alphabet = cipherText.charAt(i);
-//            // if alphabet lies between a and z
-//            if((alphabet >= 'a' && alphabet <= 'z') ||
-//                    (alphabet >= 'A' && alphabet <= 'Z'))
-//            {
-//                // shift alphabet
-//                alphabet = (char) (alphabet + shift);
-//            }
-//            // if shift alphabet greater than 'z'
-//            if(alphabet > 'z') {
-//                // reshift to starting position
-//                alphabet = (char) (alphabet+'a'-'z'-1);
-//            }
-//            // if shift alphabet greater than 'Z'
-//            else if(alphabet > 'Z' && alphabet < 'a') {
-//                //reshift to starting position
-//                alphabet = (char) (alphabet+'A'-'Z'-1);
-//            }
-//            cipherText = cipherText + alphabet;
-//        }
-//        System.out.println(" Your decrypted text is : " + cipherText);
-//    }
-//
+public class Decrypter {
+
+    public String decrypt(String plaintext, int shift) {
+        if (shift > 26) {
+            shift = shift % 26;
+        } else if (shift < 0) {
+            shift = (shift % 26) + 26;
+        }
+
+        String cipherText = "";
+        int length = plaintext.length();
+        for (int i = 0; i < length; i++) {
+            char ch = plaintext.charAt(i);
+            if (Character.isLetter(ch)) {
+                if (Character.isLowerCase(ch)) {
+                    char c = (char) (ch + shift);
+                    if (c > 'z') {
+                        cipherText += (char) (ch - (26 - shift));
+                    } else {
+                        cipherText += c;
+                    }
+
+                } else if (Character.isUpperCase(ch)) {
+                    char c = (char) (ch + shift);
+                    if (c > 'Z') {
+                        cipherText += (char) (ch - (26 - shift));
+                    } else {
+                        cipherText += c;
+                    }
+                }
+
+            } else {
+                cipherText += ch;
+            }
+        }
+        return cipherText;
+
+    }
+
+
+
+
+//public static void main(String[] args){
+//        String text = "message";
+//        String cipher = encrypt(text, 5);
+//        System.out.println(cipher);
 //}
+
+}
