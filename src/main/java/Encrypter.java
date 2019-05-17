@@ -41,9 +41,10 @@ public class Encrypter {
 
 
     public static String decrypt(String plaintext, int shift) {
-        if (shift > 26) {
+        if (shift > 26){
             shift = shift % 26;
-        } else if (shift < 0) {
+        }
+        else if (shift < 0) {
             shift = (shift % 26) + 26;
         }
 
