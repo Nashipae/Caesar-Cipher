@@ -12,20 +12,18 @@ public class Main {
 
 //        Get user input on shift value
         System.out.println(" Enter the value by which each character in the plaintext message gets shifted : ");
-//        int shift = requestText.nextInt();
+        int shift = requestText.nextInt();
+//
+        Encrypter myEncrypter = new Encrypter();
+        String cipherText = Encrypter.encrypt(requestText, shift);
+        System.out.println("Your encrypted text is : " + cipherText);
 
-//        Encrypter myEncrypter = new Encrypter();
-//        String cipher = myEncrypter.encrypt(requestText, shift);
-//        System.out.println("Your encrypted text is : " + cipher);
-//
-//        Decrypter mydecrypter = new Decrypter();
-//        String cipher = myDecrypter.decrypt(cipher, shift);
-//        System.out.println("Your encrypted text is : " + cipher);
-//
-//    }
-//
-//
-//    }
+        Decrypter mydecrypter = new Decrypter();
+        String cipherText = myDecrypter.decrypt(cipherText, shift);
+
+        System.out.println("Your encrypted text is : " + cipherText);
+
     }
 
-}
+
+    }
