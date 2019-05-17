@@ -37,7 +37,6 @@ public class Encoder {
             }
             cipherText = cipherText + alphabet;
         }
-
         System.out.println(" Your encrypted text is : " + cipherText);
     }
 
