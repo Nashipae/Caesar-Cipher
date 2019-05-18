@@ -38,13 +38,4 @@ public class Decrypter {
     }
 
 
-
-//public static void main(String[] args){
-//       String text = "message";
-//        String cipher = encrypt(text, 5);
-//        System.out.println(cipher);
-//        String decrypted = decrypt(cipher,5);
-//        System.out.println(decrypted);
-
 }
-

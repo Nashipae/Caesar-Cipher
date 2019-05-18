@@ -3,6 +3,16 @@
 import java.util.Scanner;
 
 public class Encrypter {
+    private String  plainText;
+    private int shift;
+
+    public String getPlainText() {
+    return plainText;
+    }
+
+    public int getShift() {
+        return shift;
+    }
 
     public String encrypt(String plaintext, int shift) {
         if (shift > 26) {

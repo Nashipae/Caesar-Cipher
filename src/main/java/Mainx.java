@@ -1,9 +1,8 @@
-import java.io.Console;
 import java.util.Scanner;
 
-public class Main {
+public class Mainx {
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
 
 //        Get user input
         Scanner requestText = new Scanner(System.in);
@@ -22,8 +21,9 @@ public class Main {
         Decrypter myDecrypter = new Decrypter();
         String decryptedText = myDecrypter.decrypt(cipherText, shift);
 
-        System.out.println("Your decrypted text is : " + decryptedText);
+        System.out.println("Your encrypted text is : " + cipherText);
 
     }
 
-}
+
+    }
